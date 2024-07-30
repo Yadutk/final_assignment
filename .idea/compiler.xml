@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Question_1" />
-        <module name="Question_2" />
+        <module name="csvtodb" />
+        <module name="dbtocsv" />
       </profile>
     </annotationProcessing>
   </component>
