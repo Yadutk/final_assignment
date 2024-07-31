@@ -16,14 +16,13 @@ public class App
         String[] line;
         String jdbcURL = "jdbc:postgresql://localhost:5432/customer";
 
-        Connection connection = null;
 
         try {
 
             CSVReader reader = new CSVReader(new FileReader("C:\\Users\\yadul\\IdeaProjects\\final_assignment\\src\\public\\customers.csv"));
             reader.readNext();
 
-            connection = DriverManager.getConnection(jdbcURL,"postgres","1339");
+            Connection connection = DriverManager.getConnection(jdbcURL,"postgres","1339");
 
             String insert_table1 = "INSERT INTO customer_info VALUES(?,?,?,?,?,?,?)";
             PreparedStatement statement_1 = connection.prepareStatement(insert_table1);
@@ -61,7 +60,7 @@ public class App
                 statement_2.setString(4,website);
                 String work_phnum = line[8];
                 statement_2.setString(5,work_phnum);
-                String work_email = f_name.toLowerCase()+l_name.toLowerCase()+"@sample.com";
+                String work_email = f_name.toLowerCase()+"_"+l_name.toLowerCase()+"@sample.com";
                 statement_2.setString(6,work_email);
 
                 statement_2.addBatch();
