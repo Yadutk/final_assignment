@@ -15,9 +15,6 @@ public class CustomerService{
     @Autowired
     public CustomerRepository customerRepository;
 
-    public List<Customer> getCustomers(){
-        return customerRepository.findAll();
-    }
     public Customer getCustomer(String customer_id) {
         return customerRepository.findById(customer_id).orElse(null);
     }
